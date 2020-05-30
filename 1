@@ -1,0 +1,12 @@
+1)
+x = [-5:0.5:5];
+y = [-5:0.5:5];
+[X, Y] = meshgrid(x, y);
+a = 3
+b = 5
+c = 4
+d = 0
+Z = -(a/c).*X - Y.*(b/c) - d;
+figure
+surfc(X, Y, Z)
+view(-38, 18)
