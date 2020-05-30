@@ -1,0 +1,7 @@
+   [x,y,z] = meshgrid([-3:0.1:3], [-3:0.1:3], [-3:0.1:3]); 
+   F = -(x.^2).*(z.^3) - (9/80).*(y.^2).*(z.^3) + (x.^2 + (9/4).*(y.^2) + (z.^2) - 1).^3;
+   hpatch = patch(isosurface(x,y,z,F,0));
+   isonormals(x,y,z,F,hpatch);
+   set(hpatch,'FaceColor','r','EdgeColor','none');
+   camlight left; lighting phong;
+   view([-65,20]);
