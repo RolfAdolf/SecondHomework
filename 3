@@ -1,4 +1,4 @@
-1)
+a)
 x = [-5:0.1:5];
 y = [-5:0.1:5];
 [X, Y] = meshgrid(x, y);
@@ -8,20 +8,7 @@ figure
 surfc(X, Y, Z)
 view(-38, 18)
 
-2)
-x = [0:0.1:2*pi];
-y = [0:0.1:2*pi];
-[bet, phi] = meshgrid(x, y);
-a = 3
-c = 4
-X = a.*ch(phi) .* cos(bet)
-Y = a.*ch(phi) .* sin(bet)
-Z = c .* sh(phi)
-figure
-surfc(X, Y, Z)
-view(-38, 18)
-
-3)
+b)
 x = [0:0.1:3*pi];
 y = [0:0.1:2*pi];
 [bet, phi] = meshgrid(x, y);
@@ -34,7 +21,7 @@ figure
 surfc(X, Y, Z)
 view(-38, 18)
 
-4)
+c)
 x = [0:0.1:(2.5)*pi];
 y = [0:0.1:4];
 [bet, r] = meshgrid(x, y);
@@ -46,20 +33,20 @@ figure
 surfc(X, Y, Z)
 view(-38, 18)
 
-5)
+d)
 x = [0:0.1:2*pi];
 y = [-pi:0.1:pi];
 [phi, bet] = meshgrid(x, y);
 a = 2;
 b = 3;
-X = a.*(phi).*((exp(b) + exp(-bet))./2)
-Y = a.*(phi).*((exp(b) - exp(-bet))./2)
+X = a.*(phi).*((exp(bet) + exp(-bet))./2)
+Y = b.*(phi).*((exp(bet) - exp(-bet))./2)
 Z = phi.^2
 figure
 surfc(X, Y, Z)
 view(-38, 18)
 
-6)x = [-3:0.1:3];
+e)x = [-3:0.1:3];
 y = [-3:0.1:3];
 [u, v] = meshgrid(x, y);
 a = 1
@@ -68,9 +55,10 @@ Y = (2*a).*u
 Z = v
 figure
 surfc(X, Y, Z)
-view(-38, 18) u = [-3:0.1:3];
+view(-38, 18)
+u = [-3:0.1:3];
 
-7)
+f)
 x = [0:0.1:3*pi];
 y = [0:0.1:3*pi];
 [u, v] = meshgrid(x, y);
@@ -83,7 +71,7 @@ figure
 surfc(X, Y, Z)
 view(-38, 18)
 
-8)x = [0:0.1:3*pi];
+g)x = [0:0.1:3*pi];
 y = [-pi:0.1:pi];
 [u, v] = meshgrid(x, y);
 a = 1
@@ -95,7 +83,7 @@ figure
 surfc(X, Y, Z)
 view(-38, 18) 
 
-9)
+h)
 x = [0:0.1:(3)];
 y = [0:0.1:(3*pi)];
 [u, v] = meshgrid(x, y);
@@ -108,7 +96,7 @@ figure
 surfc(X, Y, Z)
 view(-38, 18)
 
-10)
+i)
 x = [0:0.1:(3)];
 y = [0:0.1:(3*pi)];
 [r, bet] = meshgrid(x, y);
@@ -120,9 +108,9 @@ figure
 surfc(X, Y, Z)
 view(-38, 18)
 
-11)
-x = [0:0.1:(3)*pi];
-y = [-(pi):0.1:(pi)];
+j)
+x = [-pi:0.1:(3)*pi];
+y = [-(2*pi):0.1:(2*pi)];
 [u, v] = meshgrid(x, y);
 a = 1
 b = 1
@@ -133,7 +121,7 @@ figure
 surfc(X, Y, Z)
 view(-38, 18)
 
-12)
+k)
 x = [0:0.1:(3)];
 y = [-2*(pi):0.1:2*(pi)];
 [r, u] = meshgrid(x, y);
@@ -148,7 +136,7 @@ figure
 surfc(X, Y, Z)
 view(-38, 18)
 
-13)x = [0:0.1:5];
+l)x = [0:0.1:5];
 y = [0:0.1:2*pi];
 [v, phi] = meshgrid(x, y);
 a = 2
@@ -160,8 +148,8 @@ figure
 surfc(X, Y, Z)
 view(-38, 18)
 
-14)
- x = [-3:0.1:3];
+m)
+x = [-2*pi:0.1:2*pi];
 y = [-3:0.1:3];
 [u, v] = meshgrid(x, y);
 a = 2
