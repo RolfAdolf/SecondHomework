@@ -2,36 +2,105 @@ a)
 x = [-5:0.1:5];
 y = [-5:0.1:5];
 [X, Y] = meshgrid(x, y);
-a = 3
-Z = a.*X.*exp(-(X.^2) - (Y.^2))
-figure
-surfc(X, Y, Z)
-view(-38, 18)
+a = 3;
+Z = a.*X.*exp(-(X.^2) - (Y.^2));
+figure;
+surfc(X, Y, Z);
+view(-38, 18);
+
+
+x = [-5:0.1:5];
+y = [-5:0.1:5];
+[X, Y] = meshgrid(x, y);
+a = 3;
+Z = a.*X.*exp(-(X.^2) - (Y.^2));
+figure;
+surf(X, Y, Z);
+view(-38, 18);
+
+
+x = [-5:0.1:5];
+y = [-5:0.1:5];
+[X, Y] = meshgrid(x, y);
+a = 3;
+Z = a.*X.*exp(-(X.^2) - (Y.^2));
+figure;
+mesh(X, Y, Z);
+view(-38, 18);
+
+
 
 b)
 x = [0:0.1:3*pi];
 y = [0:0.1:2*pi];
 [bet, phi] = meshgrid(x, y);
-a = 1
-c = 1
-X = a.*((exp(phi) + exp(-phi))./2) .* cos(bet)
-Y = a.*((exp(phi) + exp(-phi))./2) .* sin(bet)
-Z = c .* ((exp(phi) - exp(-phi))./2)
-figure
-surfc(X, Y, Z)
-view(-38, 18)
+a = 1;
+c = 1;
+X = a.*((exp(phi) + exp(-phi))./2) .* cos(bet);
+Y = a.*((exp(phi) + exp(-phi))./2) .* sin(bet);
+Z = c .* ((exp(phi) - exp(-phi))./2);
+figure;
+surfc(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:3*pi];
+y = [0:0.1:2*pi];
+[bet, phi] = meshgrid(x, y);
+a = 1;
+c = 1;
+X = a.*((exp(phi) + exp(-phi))./2) .* cos(bet);
+Y = a.*((exp(phi) + exp(-phi))./2) .* sin(bet);
+Z = c .* ((exp(phi) - exp(-phi))./2);
+figure;
+surf(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:3*pi];
+y = [0:0.1:2*pi];
+[bet, phi] = meshgrid(x, y);
+a = 1;
+c = 1;
+X = a.*((exp(phi) + exp(-phi))./2) .* cos(bet);
+Y = a.*((exp(phi) + exp(-phi))./2) .* sin(bet);
+Z = c .* ((exp(phi) - exp(-phi))./2);
+figure;
+mesh(X, Y, Z);
+view(-38, 18);
+
 
 c)
 x = [0:0.1:(2.5)*pi];
 y = [0:0.1:4];
 [bet, r] = meshgrid(x, y);
 a = 2;
-X = r.*cos(x)
-Y = r.*sin(x)
-Z = (r.^2)/(2*a)
-figure
-surfc(X, Y, Z)
-view(-38, 18)
+X = r.*cos(x);
+Y = r.*sin(x);
+Z = (r.^2)/(2*a);
+figure;
+surfc(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:(2.5)*pi];
+y = [0:0.1:4];
+[bet, r] = meshgrid(x, y);
+a = 2;
+X = r.*cos(x);
+Y = r.*sin(x);
+Z = (r.^2)/(2*a);
+figure;
+surf(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:(2.5)*pi];
+y = [0:0.1:4];
+[bet, r] = meshgrid(x, y);
+a = 2;
+X = r.*cos(x);
+Y = r.*sin(x);
+Z = (r.^2)/(2*a);
+figure;
+mesh(X, Y, Z);
+view(-38, 18);
 
 d)
 x = [0:0.1:2*pi];
@@ -39,124 +108,371 @@ y = [-pi:0.1:pi];
 [phi, bet] = meshgrid(x, y);
 a = 2;
 b = 3;
-X = a.*(phi).*((exp(bet) + exp(-bet))./2)
-Y = b.*(phi).*((exp(bet) - exp(-bet))./2)
-Z = phi.^2
-figure
-surfc(X, Y, Z)
-view(-38, 18)
+X = a.*(phi).*((exp(bet) + exp(-bet))./2);
+Y = b.*(phi).*((exp(bet) - exp(-bet))./2);
+Z = phi.^2;
+figure;
+surfc(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:2*pi];
+y = [-pi:0.1:pi];
+[phi, bet] = meshgrid(x, y);
+a = 2;
+b = 3;
+X = a.*(phi).*((exp(bet) + exp(-bet))./2);
+Y = b.*(phi).*((exp(bet) - exp(-bet))./2);
+Z = phi.^2;
+figure;
+surf(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:2*pi];
+y = [-pi:0.1:pi];
+[phi, bet] = meshgrid(x, y);
+a = 2;
+b = 3;
+X = a.*(phi).*((exp(bet) + exp(-bet))./2);
+Y = b.*(phi).*((exp(bet) - exp(-bet))./2);
+Z = phi.^2;
+figure;
+mesh(X, Y, Z);
+view(-38, 18);
+
 
 e)x = [-3:0.1:3];
 y = [-3:0.1:3];
 [u, v] = meshgrid(x, y);
-a = 1
-X = a.*(u.^2)
-Y = (2*a).*u
-Z = v
-figure
-surfc(X, Y, Z)
-view(-38, 18)
-u = [-3:0.1:3];
+a = 1;
+X = a.*(u.^2);
+Y = (2*a).*u;
+Z = v;
+figure;
+surfc(X, Y, Z);
+view(-38, 18);
+
+x = [-3:0.1:3];
+y = [-3:0.1:3];
+[u, v] = meshgrid(x, y);
+a = 1;
+X = a.*(u.^2);
+Y = (2*a).*u;
+Z = v;
+figure;
+surf(X, Y, Z);
+view(-38, 18);
+
+x = [-3:0.1:3];
+y = [-3:0.1:3];
+[u, v] = meshgrid(x, y);
+a = 1;
+X = a.*(u.^2);
+Y = (2*a).*u;
+Z = v;
+figure;
+mesh(X, Y, Z);
+view(-38, 18);
+
 
 f)
 x = [0:0.1:3*pi];
 y = [0:0.1:3*pi];
 [u, v] = meshgrid(x, y);
-a = 1
-b = 1
-X = (a+b.*cos(v)).*cos(u)
-Y = (a+b.*cos(v)).*sin(u)
-Z = b.*sin(v)
-figure
-surfc(X, Y, Z)
-view(-38, 18)
+a = 1;
+b = 1;
+X = (a+b.*cos(v)).*cos(u);
+Y = (a+b.*cos(v)).*sin(u);
+Z = b.*sin(v);
+figure;
+surfc(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:3*pi];
+y = [0:0.1:3*pi];
+[u, v] = meshgrid(x, y);
+a = 1;
+b = 1;
+X = (a+b.*cos(v)).*cos(u);
+Y = (a+b.*cos(v)).*sin(u);
+Z = b.*sin(v);
+figure;
+surf(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:3*pi];
+y = [0:0.1:3*pi];
+[u, v] = meshgrid(x, y);
+a = 1;
+b = 1;
+X = (a+b.*cos(v)).*cos(u);
+Y = (a+b.*cos(v)).*sin(u);
+Z = b.*sin(v);
+figure;
+mesh(X, Y, Z);
+view(-38, 18);
+
 
 g)x = [0:0.1:3*pi];
 y = [-pi:0.1:pi];
 [u, v] = meshgrid(x, y);
-a = 1
-b = 1
-X = a.*cos(u).*cos(v)
-Y = a.*sin(u).*cos(v)
-Z = b.*sin(v)
-figure
-surfc(X, Y, Z)
-view(-38, 18) 
+a = 1;
+b = 1;
+X = a.*cos(u).*cos(v);
+Y = a.*sin(u).*cos(v);
+Z = b.*sin(v);
+figure;
+surfc(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:3*pi];
+y = [-pi:0.1:pi];
+[u, v] = meshgrid(x, y);
+a = 1;
+b = 1;
+X = a.*cos(u).*cos(v);
+Y = a.*sin(u).*cos(v);
+Z = b.*sin(v);
+figure;
+surf(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:3*pi];
+y = [-pi:0.1:pi];
+[u, v] = meshgrid(x, y);
+a = 1;
+b = 1;
+X = a.*cos(u).*cos(v);
+Y = a.*sin(u).*cos(v);
+Z = b.*sin(v);
+figure;
+mesh(X, Y, Z);
+view(-38, 18);
+
 
 h)
 x = [0:0.1:(3)];
 y = [0:0.1:(3*pi)];
 [u, v] = meshgrid(x, y);
-a = 1
-b = 1
-X = a.*(((u+b).^2).*(log(u+b))).*sin(v)
-Y = a.*(((u+b).^2).*(log(u+b))).*cos(v) 
-Z = u
-figure
-surfc(X, Y, Z)
-view(-38, 18)
+a = 1;
+b = 1;
+X = a.*(((u+b).^2).*(log(u+b))).*sin(v);
+Y = a.*(((u+b).^2).*(log(u+b))).*cos(v); 
+Z = u;
+figure;
+surfc(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:(3)];
+y = [0:0.1:(3*pi)];
+[u, v] = meshgrid(x, y);
+a = 1;
+b = 1;
+X = a.*(((u+b).^2).*(log(u+b))).*sin(v);
+Y = a.*(((u+b).^2).*(log(u+b))).*cos(v); 
+Z = u;
+figure;
+surf(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:(3)];
+y = [0:0.1:(3*pi)];
+[u, v] = meshgrid(x, y);
+a = 1;
+b = 1;
+X = a.*(((u+b).^2).*(log(u+b))).*sin(v);
+Y = a.*(((u+b).^2).*(log(u+b))).*cos(v); 
+Z = u;
+figure;
+mesh(X, Y, Z);
+view(-38, 18);
+
 
 i)
 x = [0:0.1:(3)];
 y = [0:0.1:(3*pi)];
 [r, bet] = meshgrid(x, y);
-b = 1
-X = r.*cos(bet)
-Y = r.*sin(bet)
-Z = b./r
-figure
-surfc(X, Y, Z)
-view(-38, 18)
+b = 1;
+X = r.*cos(bet);
+Y = r.*sin(bet);
+Z = b./r;
+figure;
+surfc(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:(3)];
+y = [0:0.1:(3*pi)];
+[r, bet] = meshgrid(x, y);
+b = 1;
+X = r.*cos(bet);
+Y = r.*sin(bet);
+Z = b./r;
+figure;
+surf(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:(3)];
+y = [0:0.1:(3*pi)];
+[r, bet] = meshgrid(x, y);
+b = 1;
+X = r.*cos(bet);
+Y = r.*sin(bet);
+Z = b./r;
+figure;
+mesh(X, Y, Z);
+view(-38, 18);
 
 j)
 x = [-pi:0.1:(3)*pi];
 y = [-(2*pi):0.1:(2*pi)];
 [u, v] = meshgrid(x, y);
-a = 1
-b = 1
-X = a.*cos(u).*cos(v)
-Y = a.*cos(u).*sin(v)
-Z = sin(u-a)
-figure
-surfc(X, Y, Z)
-view(-38, 18)
+a = 1;
+b = 1;
+X = a.*cos(u).*cos(v);
+Y = a.*cos(u).*sin(v);
+Z = sin(u-a);
+figure;
+surfc(X, Y, Z);
+view(-38, 18);
+
+x = [-pi:0.1:(3)*pi];
+y = [-(2*pi):0.1:(2*pi)];
+[u, v] = meshgrid(x, y);
+a = 1;
+b = 1;
+X = a.*cos(u).*cos(v);
+Y = a.*cos(u).*sin(v);
+Z = sin(u-a);
+figure;
+surf(X, Y, Z);
+view(-38, 18);
+
+x = [-pi:0.1:(3)*pi];
+y = [-(2*pi):0.1:(2*pi)];
+[u, v] = meshgrid(x, y);
+a = 1;
+b = 1;
+X = a.*cos(u).*cos(v);
+Y = a.*cos(u).*sin(v);
+Z = sin(u-a);
+figure;
+mesh(X, Y, Z);
+view(-38, 18);
 
 k)
 x = [0:0.1:(3)];
 y = [-2*(pi):0.1:2*(pi)];
 [r, u] = meshgrid(x, y);
-a = 1
-um = 0.2
-w = 4
-phi = (pi/2)
-X = r.*cos(u)
-Y = r.*sin(u)
-Z = a.*exp(-um*r).*sin(w.*r+phi)
-figure
-surfc(X, Y, Z)
-view(-38, 18)
+a = 1;
+um = 0.2;
+w = 4;
+phi = (pi/2);
+X = r.*cos(u);
+Y = r.*sin(u);
+Z = a.*exp(-um*r).*sin(w.*r+phi);
+figure;
+surfc(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:(3)];
+y = [-2*(pi):0.1:2*(pi)];
+[r, u] = meshgrid(x, y);
+a = 1;
+um = 0.2;
+w = 4;
+phi = (pi/2);
+X = r.*cos(u);
+Y = r.*sin(u);
+Z = a.*exp(-um*r).*sin(w.*r+phi);
+figure;
+surf(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:(3)];
+y = [-2*(pi):0.1:2*(pi)];
+[r, u] = meshgrid(x, y);
+a = 1;
+um = 0.2;
+w = 4;
+phi = (pi/2);
+X = r.*cos(u);
+Y = r.*sin(u);
+Z = a.*exp(-um*r).*sin(w.*r+phi);
+figure;
+mesh(X, Y, Z);
+view(-38, 18);
 
 l)x = [0:0.1:5];
 y = [0:0.1:2*pi];
 [v, phi] = meshgrid(x, y);
-a = 2
-R = 3
-X = (a+R.*sin(phi)).*cos(v)
-Y = (a+R.*sin(phi)).*sin(v)
-Z = R.*cos(phi) + b.*v
-figure
-surfc(X, Y, Z)
-view(-38, 18)
+a = 2;
+b = 2;
+R = 3;
+X = (a+R.*sin(phi)).*cos(v);
+Y = (a+R.*sin(phi)).*sin(v);
+Z = R.*cos(phi) + b.*v;
+figure;
+surfc(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:5];
+y = [0:0.1:2*pi];
+[v, phi] = meshgrid(x, y);
+a = 2;
+b = 2;
+R = 3;
+X = (a+R.*sin(phi)).*cos(v);
+Y = (a+R.*sin(phi)).*sin(v);
+Z = R.*cos(phi) + b.*v;
+figure;
+surf(X, Y, Z);
+view(-38, 18);
+
+x = [0:0.1:5];
+y = [0:0.1:2*pi];
+[v, phi] = meshgrid(x, y);
+a = 2;
+b = 2;
+R = 3;
+X = (a+R.*sin(phi)).*cos(v);
+Y = (a+R.*sin(phi)).*sin(v);
+Z = R.*cos(phi) + b.*v;
+figure;
+mesh(X, Y, Z);
+view(-38, 18);
 
 m)
 x = [-2*pi:0.1:2*pi];
 y = [-3:0.1:3];
 [u, v] = meshgrid(x, y);
-a = 2
-R = 3
-X = (1+v.*cos((0.5).*u)).*cos(u)
-Y = (1+v.*cos((1/2).*u)).*sin(u)
-Z = v.*sin((1/2).*u)
-figure
-surfc(X, Y, Z)
-view(-38, 18)
+a = 2;
+R = 3;
+X = (1+v.*cos((0.5).*u)).*cos(u);
+Y = (1+v.*cos((1/2).*u)).*sin(u);
+Z = v.*sin((1/2).*u);
+figure;
+surfc(X, Y, Z);
+view(-38, 18);
+
+x = [-2*pi:0.1:2*pi];
+y = [-3:0.1:3];
+[u, v] = meshgrid(x, y);
+a = 2;
+R = 3;
+X = (1+v.*cos((0.5).*u)).*cos(u);
+Y = (1+v.*cos((1/2).*u)).*sin(u);
+Z = v.*sin((1/2).*u);
+figure;
+surf(X, Y, Z);
+view(-38, 18);
+
+x = [-2*pi:0.1:2*pi];
+y = [-3:0.1:3];
+[u, v] = meshgrid(x, y);
+a = 2;
+R = 3;
+X = (1+v.*cos((0.5).*u)).*cos(u);
+Y = (1+v.*cos((1/2).*u)).*sin(u);
+Z = v.*sin((1/2).*u);
+figure;
+mesh(X, Y, Z);
+view(-38, 18);
