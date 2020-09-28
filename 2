@@ -1,18 +1,41 @@
 1)
-x = [-5:0.01:5];
-y = [-5:0.01:5];
+a)
+x = [-5:0.1:5];
+y = [-5:0.1:5];
 [X, Y] = meshgrid(x, y);
-a = 3
-Z = a.*(sin(sqrt(X.^2 + Y.^2)))./(sqrt(X.^2 + Y.^2))
-figure
-plot3(X, Y, Z)
-view(-38, 18)
+a = 3;
+Z = a.*(sin(sqrt(X.^2 + Y.^2)))./(sqrt(X.^2 + Y.^2));
+figure;
+plot3(X, Y, Z);
+view(-38, 18);
+
+
+б)
+x = [-5:0.1:5];
+y = [-5:0.1:5];
+[X, Y] = meshgrid(x, y);
+a = 3;
+Z = a.*(sin(sqrt(X.^2 + Y.^2)))./(sqrt(X.^2 + Y.^2));
+figure;
+mesh(X, Y, Z);
+view(-38, 18);
 2)
-x = [-5:0.01:5];
-y = [-5:0.01:5];
+а)
+x = [-5:0.1:5];
+y = [-5:0.1:5];
 [X, Y] = meshgrid(x, y);
-a = 3
-Z = -X.*sin(X) - Y.*cos(Y)
-figure
-plot3(X, Y, Z)
-view(-38, 18)
+a = 3;
+Z = -X.*sin(X) - Y.*cos(Y);
+figure;
+plot3(X, Y, Z);
+view(-38, 18);
+
+б)
+x = [-5:0.1:5];
+y = [-5:0.1:5];
+[X, Y] = meshgrid(x, y);
+a = 3;
+Z = -X.*sin(X) - Y.*cos(Y);
+figure;
+mesh(X, Y, Z);
+view(-38, 18);
